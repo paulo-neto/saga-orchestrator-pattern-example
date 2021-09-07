@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.pauloneto</groupId>
-    <artifactId>saga-orchestrator-example</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <name>saga-orchestrator-example-modules</name>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>saga-orchestrator-model</module>
-        <module>saga-orchestrator-core</module>
-        <module>saga-orchestrator-ms1</module>
-        <module>saga-orchestrator-ms2</module>
-        <module>saga-orchestrator-ms3</module>
-        <module>saga-orchestrator-consumer1</module>
-        <module>saga-orchestrator-consumer2</module>
-        <module>saga-orchestrator-consumer3</module>
-    </modules>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+      
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.pauloneto</groupId>
+  <artifactId>saga-orchestrator-example</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>saga-orchestrator-example-modules</name>
+  <packaging>pom</packaging>
+      
+  <modules>
+    <module>saga-orchestrator-model</module>
+    <module>saga-orchestrator-core</module>
+    <module>saga-orchestrator-ms-produtos</module>
+    <module>saga-orchestrator-ms-pedidos</module>
+    <module>saga-orchestrator-ms-carrinho</module>
+    <module>saga-orchestrator-ms-pagamento</module>
+    <module>saga-orchestrator-ms-compensador-pedido</module>
+  </modules>
 </project>

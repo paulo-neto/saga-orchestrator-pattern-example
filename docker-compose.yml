@@ -1,0 +1,31 @@
+version: '3'
+services:
+
+  artemismq:
+    image: vromero/activemq-artemis:2.16.0-alpine
+    environment:
+      ENABLE_JMX_EXPORTER: "true"
+      ARTEMIS_MIN_MEMORY: "1512M"
+      ARTEMIS_MAX_MEMORY: "2000M"
+      ARTEMIS_USERNAME: "test"
+      ARTEMIS_PASSWORD: "test"
+    ports:
+      - "8161:8161"
+    volumes:
+      - /home/paulo/docker_volumes/artemis:/var/lib/mysql
+
+  mysqlsrv:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: MySql2019!
+      MYSQL_DATABASE: sagaorchestrationdb
+    networks:
+      - saga-orchestration-network
+    ports:
+      - 3306:3306
+    volumes:
+      - /home/paulo/docker_volumes/mysql:/var/lib/mysql
+
+networks: 
+  saga-orchestration-network:
+    driver: bridge  
